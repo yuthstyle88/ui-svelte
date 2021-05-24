@@ -242,7 +242,7 @@
         {:else}
             <!-- svelte-ignore a11y-autofocus -->
             <input
-                class="p-11 bg-transparent placeholder-gray border-none {sizeClasses} focus:ring-0 w-full self-stretch text-foreground"
+                class="p-0 bg-transparent placeholder-gray border-none {sizeClasses} focus:ring-0 w-full self-stretch text-foreground"
                 class:cursor-not-allowed="{disabled}"
                 class:text-right="{textRight}"
                 class:tabular-nums="{tabularNumbers}"
