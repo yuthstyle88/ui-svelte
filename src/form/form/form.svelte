@@ -128,4 +128,4 @@
 
 <form bind:this="{formElement}" on:submit|preventDefault="{handleSubmit}" novalidate>
     <slot />
-</f
+</form>
