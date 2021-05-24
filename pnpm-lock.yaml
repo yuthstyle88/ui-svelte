@@ -60,6 +60,7 @@ specifiers:
   hast-util-to-html: ^8.0.0
   marked: ^2.0.1
   parse-full-name-esm: ^1.2.5
+  pnpm: ^6.4.0
   postcss: ^8.2.8
   prettier: ^2.2.1
   prettier-plugin-svelte: ^2.2.0
@@ -104,6 +105,7 @@ dependencies:
   diff: 5.0.0
   marked: 2.0.1
   parse-full-name-esm: 1.2.5
+  pnpm: 6.4.0
   svelte-intersection-observer: 0.7.0
   svelte-portal: 2.1.2
   validator: 13.6.0
@@ -12809,6 +12811,12 @@ packages:
     transitivePeerDependencies:
       - typescript
     dev: true
+
+  /pnpm/6.4.0:
+    resolution: {integrity: sha512-ws4OArFXDfjOrj6gk4Ded+CkbW6pRKkscnOEONetX2MV+m5fwxTIAVw2Fic4CNTKZbN4D182oPQyoMd5uGzrjw==}
+    engines: {node: '>=12.17'}
+    hasBin: true
+    dev: false
 
   /polished/3.7.1:
     resolution: {integrity: sha512-/QgHrNGYwIA4mwxJ/7FSvalUJsm7KNfnXiScVSEG2Xa5qxDeBn4nmdjN2pW00mkM2Tts64ktc47U8F7Ed1BRAA==}
