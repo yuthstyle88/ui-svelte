@@ -112,8 +112,7 @@
         "svelte-intersection-observer": "^0.7.0",
         "svelte-portal": "^2.1.2",
         "validator": "^13.6.0",
-        "zxcvbn-esm": "^4.4.7",
-        "@yuth/ui-config": "https://github.com/yuthstyle88/ui-config.git"
+        "zxcvbn-esm": "^4.4.7"
     },
     "repository": {
         "type": "git",
