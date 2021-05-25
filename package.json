@@ -83,7 +83,6 @@
     ],
     "peerDependencies": {
         "@nick-mazuk/lib": "^0.8.50",
-        "@nick-mazuk/ui-config": "^0.10.52",
         "tailwindcss": "^2.1.1"
     },
     "dependencies": {
@@ -113,7 +112,8 @@
         "svelte-intersection-observer": "^0.7.0",
         "svelte-portal": "^2.1.2",
         "validator": "^13.6.0",
-        "zxcvbn-esm": "^4.4.7"
+        "zxcvbn-esm": "^4.4.7",
+        "@yuth/ui-config": "https://github.com/yuthstyle88/ui-config.git"
     },
     "repository": {
         "type": "git",

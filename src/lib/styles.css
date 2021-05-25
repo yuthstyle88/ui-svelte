@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('https://fonts.nickmazuk.com/inter-variable.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('https://fonts.nickmazuk.com/inter-variable-italic.woff2') format('woff2');
+}
+
+@layer base {
+    * {
+        @apply min-w-0 min-h-0;
+    }
+
+    body {
+        @apply bg-background text-foreground overflow-x-hidden font-normal text-base;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    #svelte {
+        @apply flex flex-col min-h-screen justify-start;
+    }
+}
+
+@layer utilities {
+    .wrapper {
+        @apply mx-auto px-6 max-w-screen-lg w-full;
+    }
+    
+    .text-uppercase {
+        @apply uppercase font-semibold;
+    }
+    
+    .h1 {
+        @apply text-7xl font-bold font-display;
+    }
+    
+    .h2 {
+        @apply text-6xl font-bold font-display;
+    }
+    
+    .h3 {
+        @apply text-5xl font-bold font-display;
+    }
+    
+    .h4 {
+        @apply text-4xl font-bold font-display;
+    }
+    
+    .h5 {
+        @apply text-3xl font-bold font-display;
+    }
+    
+    .h6 {
+        @apply text-2xl font-bold font-display;
+    }
+
+    .link {
+        @apply font-semibold no-underline text-link hover:underline;
+    }
+
+    .focus-ring {
+        @apply ring-transparent transition ring-offset-2 focus:outline-none focus:ring-2 focus:ring-gray active:!ring-0 hover:!ring-0 hover:ring-offset-0 active:ring-offset-0 focus:hover:ring-0 ring-offset-background;
+    }
+
+    .input-wrapper {
+        @apply bg-background w-full border rounded overflow-hidden transition;
+    }
+
+    .input-wrapper-active {
+        @apply border-gray-300 hover:border-foreground dark:hover:border-gray focus-within:border-primary hover:focus-within:border-primary dark:hover:focus-within:border-primary ring-gray hover:ring-foreground focus-within:ring-primary hover:focus-within:ring-primary focus-within:ring-1;
+    }
+
+    .input-wrapper-error {
+        @apply ring-error border-error focus-within:ring-1;
+    }
+
+    .input-wrapper-disabled {
+        @apply cursor-not-allowed border-gray-200 bg-gray-100;
+    }
+
+    .input-wrapper-readonly {
+        @apply cursor-default border-gray-300;
+    }
+}
+
+.prose h1 {
+    @apply h2;
+}
+.prose h2 {
+    @apply h3;
+}
+.prose h3 {
+    @apply h5;
+}
+.prose h4 {
+    @apply h6;
+}
+
+/* move colors to tailwind.ts when issue is resolved -- https://github.com/tailwindlabs/tailwindcss-typography/issues/143 */
+.prose {
+    @apply text-foreground;
+}
+.prose a {
+    @apply link;
+}
+.prose strong {
+    @apply text-foreground;
+}
+.prose code {
+    @apply text-highlight;
+}
+.prose ol > li::before {
+    @apply text-foreground;
+}
+.prose pre {
+    @apply text-foreground bg-gray-100;
+}
+.prose pre {
+    @apply text-background bg-gray-800 dark:text-foreground dark:bg-gray-200;
+}
+.prose blockquote {
+    @apply text-foreground;
+}
+.prose a {
+    @apply text-link;
+}
+.prose a code {
+    @apply text-link;
+}
+
+/* end move to tailwind.ts */
+
+:target {
+    scroll-margin-top: 96px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.ProseMirror img {
+    @apply ring-0 ring-offset-0 transition;
+}
+.ProseMirror img.ProseMirror-selectednode {
+    @apply ring-2 ring-offset-2 ring-offset-background ring-primary;
+}
